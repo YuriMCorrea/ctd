@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { styles } from '../../global/styles';
-import { View, Text } from 'react-native';
+import { View, Text, AppRegistry } from 'react-native';
+import api from '../../services';
 
 function Listar(){
-    
+    const [produtos, setProdutos]= useState([]);
+
+    useEffect(()=> { 
+       api.get("/produto/").then((response)=>setProdutos(response.data)).catch((err)=>{
+         console.error("Ops ocorreu um erro"+err)
+       })
+    }, [])
     return(
         <>
-            <View style={styles.cHeader}>
-                <Text style={styles.cHeaderTxt}>HEADER</Text>
-              </View>
-
-              <View style={styles.cBody}>
-                <Text style={styles.cBodyTxt}>BODY</Text>
-              </View>
+        
         </>
     );
 };
