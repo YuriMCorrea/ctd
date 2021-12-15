@@ -18,7 +18,7 @@ export default function App() {
               <Header />
               <Listar />
 
-              <Formulario />
+              {/* <Formulario /> */}
 
             </View>
           </>

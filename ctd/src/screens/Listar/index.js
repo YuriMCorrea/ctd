@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "../../global/styles";
-import { View, Text, AppRegistry } from "react-native";
+import { View, Text, AppRegistry, FlatList} from "react-native";
 import api from "../../services";
+import CardProduto from "../../components/cardProduto"
 
 function Listar() {
   const [produtos, setProdutos] = useState([]);
@@ -16,13 +17,11 @@ useEffect(() => {
   }, []);
 
 
-  import api from "../../services";
-
-  function deleteProduto(id) {
-    const response = api.delete(`/produto/${id}`).then(function (response) {
-      alert(`${response}`);
-    });
-  }
+  // function deleteProduto(id) {
+  //   const response = api.delete(`/produto/${id}`).then(function (response) {
+  //     alert(`${response}`);
+  //   });
+  // }
   return (
     <>
       <FlatList
