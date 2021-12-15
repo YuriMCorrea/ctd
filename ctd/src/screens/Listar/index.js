@@ -11,6 +11,15 @@ function Listar(){
          console.error("Ops ocorreu um erro"+err)
        })
     }, [])
+
+    import api from "../../services"
+
+function deleteProduto (id){
+    const response = api.delete(`/produto/${id}`)
+    .then(function(response){
+        alert(`${response}`);
+    })
+}
     return(
         <>
         
@@ -19,3 +28,4 @@ function Listar(){
 };
 
 export default Listar;
+
