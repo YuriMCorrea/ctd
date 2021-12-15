@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { styles } from "../../global/styles";
 import { View, Text, AppRegistry, FlatList} from "react-native";
 import api from "../../services";
-import CardProduto from "../../components/cardProduto"
+import CardProduto from "../../components/CardProduto"
 
 function Listar() {
   const [produtos, setProdutos] = useState([]);
@@ -26,10 +26,8 @@ useEffect(() => {
     <>
       <FlatList
         data={produtos}
-        keyExtractor={(produtos) => {
-          produtos?.id;
-        }} //ALGO UNICO NO SEU ARRAY
-        renderItem={({ produtos }) => <CardProduto />}
+        keyExtractor={(item) => item.id} //ALGO UNICO NO SEU ARRAY
+        renderItem={({ item }) => <CardProduto />}
       />
     </>
   );

@@ -4,7 +4,7 @@ import React from 'react';
 import { View } from 'react-native';
 import Listar from "./src/screens/Listar"
 import { styles } from './src/global/styles';
-import Header from './src/components/header';
+import Header from './src/components/Header';
 import Formulario from './src/screens/Formulario';
 
 EStyleSheet.build()
