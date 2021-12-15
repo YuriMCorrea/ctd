@@ -4,6 +4,7 @@ import React from 'react';
 import { View } from 'react-native';
 import Listar from "./src/screens/Listar"
 import { styles } from './src/global/styles';
+import Header from './src/components/header'
 
 EStyleSheet.build();
 
@@ -13,6 +14,7 @@ export default function App() {
             {/* <StatusBar style="auto" /> */}
 
             <View style={styles.container}>
+              <Header />
               <Listar />
             </View>
           </>

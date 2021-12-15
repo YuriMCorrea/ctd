@@ -13,7 +13,9 @@ function Listar(){
     }, [])
     return(
         <>
-        
+        <View style={{height:'85%', width:'1%' ,backgroundColor:'#fff'}}>
+
+        </View>
         </>
     );
 };

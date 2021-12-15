@@ -12,29 +12,4 @@ export const styles = EStyleSheet.create({
         backgroundColor: 'blue',
       },
     
-// -----------------------------   HEADER LISTAR --------------
-
-      cHeader: {
-        height: '15%',
-        width: '100%',
-        backgroundColor:'yellow',
-      },
-
-      cHeaderTxt: {
-        textAlign: 'center',
-        fontSize:'3rem',
-        padding: '2rem',
-      },
-
-// -----------------------------   BODY LISTAR --------------
-      cBody: {
-        height: '85%',
-        width: '100%',
-      },
-
-      cBodyTxt: {
-        textAlign: 'center',
-        fontSize:'3rem',
-        padding: '12rem',
-      },
 });
