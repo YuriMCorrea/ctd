@@ -4,8 +4,9 @@ import React from 'react';
 import { View } from 'react-native';
 import Listar from "./src/screens/Listar"
 import { styles } from './src/global/styles';
+import Formulario from './src/screens/Formulario';
 
-EStyleSheet.build();
+EStyleSheet.build()
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
             {/* <StatusBar style="auto" /> */}
 
             <View style={styles.container}>
-              <Listar />
+              <Formulario />
             </View>
           </>
   );

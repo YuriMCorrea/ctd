@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/datetimepicker": "^5.0.1",
     "axios": "^0.24.0",
     "expo": "~43.0.2",
     "expo-splash-screen": "~0.13.5",
