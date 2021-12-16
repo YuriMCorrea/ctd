@@ -7,7 +7,7 @@ import CardProduto from "../../components/cardProduto";
 function Listar() {
   const [produtos, setProdutos] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
     api
       .get("/produto/")
       .then((response) => setProdutos(response.data))
@@ -35,6 +35,7 @@ function Listar() {
             fotoLink={item.fotoLink}
           />
         )}
+
       />
     </>
   );
