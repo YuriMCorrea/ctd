@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "../../global/styles";
-import { View, Text, AppRegistry } from "react-native";
-import api from "../../services";
+import { View, Text, AppRegistry, FlatList } from "react-native";
+import api from "../../services/index";
+import CardProduto from "../../components/cardProduto";
 
 function Listar() {
   const [produtos, setProdutos] = useState([]);
@@ -15,21 +16,25 @@ function Listar() {
       });
   }, []);
 
-  import api from "../../services";
-
-  function deleteProduto(id) {
-    const response = api.delete(`/produto/${id}`).then(function (response) {
-      alert(`${response}`);
-    });
-  }
   return (
     <>
       <FlatList
         data={produtos}
-        keyExtractor={(produtos) => {
-          produtos?.id;
+        keyExtractor={(item) => {
+          item.id;
         }} //ALGO UNICO NO SEU ARRAY
-        renderItem={({ produtos }) => <CardProduto />}
+        renderItem={({ item }) => (
+          <CardProduto
+            id={item.id}
+            nome={item.nome}
+            descricao={item.descricao}
+            qtdEstoque={item.qtdEstoque}
+            nomeCategoria={item.nomeCategoria}
+            dataFabricacao={item.dataFabricacao}
+            valor={item.valor}
+            fotoLink={item.fotoLink}
+          />
+        )}
       />
     </>
   );

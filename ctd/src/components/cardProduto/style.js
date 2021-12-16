@@ -3,79 +3,156 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 export const styles = EStyleSheet.create({
     container: {
         backgroundColor: 'gray',
-        flexDirection: 'row',
-        marginTop: 50,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 30
+        marginTop: 10,
+        maxWidth: '100%',
+        borderWidth: 3,
+        borderRadius: 30,
+        height: 530,
+        borderColor: 'white',
     },
 
+    safeArea: {
+        alignItems: 'center'
+    },
+
+    imagensView: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    descImagem: {
+        flexDirection: 'row',
+        
+    },  
+    
     imagens: {
-        width: 40,
-        height: 40
-    },
-
-    idNomeCategoria: {
-        flexDirection: 'row',
-        width: '70%'
-    },
-
-    id: {
-        backgroundColor: '#ff5757',
-        margin: 10,
         height: 25,
+        width: 25,
+        marginBottom: 5,
+        marginTop: 5,
+        marginLeft: 150
+    },
+    
+    // idNomeCategoria: {
+    //     maxWidth: '100%',
+    // },
+    
+    idDescricao: {
+        maxWidth: '80%'
+    },
+
+    letraId: {
+        color: '#000',
+        fontWeight: 'bold',
+        fontSize: 20
+    },  
+    
+    id: {
+        backgroundColor: 'lightgray',
+        margin: 10,
+        borderWidth: 4,
+        borderRadius: 100,
+        borderColor: 'white',
+        width: 40,
+        height: 40,
         justifyContent: 'center',
         alignItems: 'center',
+        position: 'absolute'
     },
-
+    
     nome: {
-        backgroundColor: '#ff914d',
-        margin: 10,
+        backgroundColor: 'lightgray',
+        marginLeft: 10,
+        width: 295,
+        height: 40,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
     },
-
+    
     categoria: {
-        backgroundColor: '#5ce1e6',
-        margin: 10,
+        backgroundColor: 'white',
+        marginLeft: 10,
+        height: 40,
+        width: 295,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
 
     descricao: {
-        backgroundColor: '#fdd837',
-        margin: 10,
+        backgroundColor: 'white',
+        marginLeft: 10,
+        marginRight: 10,
+        borderBottomRightRadius: 10,
+        borderBottomLeftRadius: 10,
         height: 70,
-        maxWidth: '100%'
+        width: 295,
+        bottom: 0,
+        flexDirection: 'row'
     },
 
+    // qtdDtValor:{
+    //     maxWidth: '10%',
+    //     marginLeft: 10,
+    //     flexDirection: 'row'
+    // },
+    
     quantidade: {
-        backgroundColor: '#c9e265',
-        margin: 10,
-        height: 25,
+        backgroundColor: 'lightgray',
+        marginLeft: 10,
+        width: 295,
+        height: 40,
         justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    data: {
-        backgroundColor: '#cb6ce6',
-        margin: 10,
-        height: 25,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    valor: {
-        backgroundColor: '#7ed957',
-        margin: 10,
-        height: 25,
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        // maxWidth: '40%'
     },
     
-    imegemApi: {
-        maxWidth: '100%',
-        maxHeight: '100%'
+    data: {
+        backgroundColor: 'white',
+        marginLeft: 10,
+        width: 295,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // maxWidth: '50%'
+    },
+    
+    valor: {
+        backgroundColor: 'lightgray',
+        width: 295,
+        marginLeft: 10,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // maxWidth: '40%'
+    },
+    
+    fotoLink: {
+        width: 295,
+        height: 200,
+        borderRadius: 10,
+        marginTop: 20,
+        marginLeft: 10,
+        marginBottom: 10
+    },
+
+    viewImagem: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10
+    },
+
+    idImg: {
+        flexDirection: 'row'
+    },
+    
+    letras: {
+        color: '#000' 
+    },
+
+    letrasNome: {
+        fontSize: 20,
+        color: '#000'
     }
 })

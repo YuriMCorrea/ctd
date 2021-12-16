@@ -9,6 +9,7 @@ export const styles = EStyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: 'lightyellow'
       },
     
 // -----------------------------   HEADER LISTAR --------------
