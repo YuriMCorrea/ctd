@@ -3,7 +3,7 @@ import { styles } from "../../global/styles";
 
 import { View, Text, AppRegistry, FlatList, TextInput, TouchableOpacity, Image} from "react-native";
 import api from "../../services";
-import CardProduto from "../../components/CardProduto"
+import CardProduto from "../../components/cardProduto"
 
 
 function Listar() {
@@ -51,7 +51,7 @@ useEffect(() => {
           />     
           <TouchableOpacity  onPress={()=>{filtrarProduto(search)}}>
             <Image
-              style={styles.lupa}
+              style={{width:"10px", height:"10px"}}
               source={require('../../../assets/lupa.png')}
             />
             </TouchableOpacity>       

@@ -4,6 +4,8 @@ import { ScrollView, View } from 'react-native';
 import { styles } from './src/global/styles';
 import AtualizarProduto from './src/screens/AtualizarProduto/index';
 import CadastrarProduto from './src/screens/CadastrarProduto/index';
+import Listar from './src/screens/Listar';
+import Header from './src/components/header'
 
 EStyleSheet.build()
 
@@ -12,9 +14,10 @@ export default function App() {
           <>
             {/* <StatusBar style="auto" /> */}
             <ScrollView>
+              <Header/>
               <View style={styles.container}>
                 {/* <Formulario /> */}
-                <CadastrarProduto />
+                <CadastrarProduto/>
               </View>
             </ScrollView>
           </>
