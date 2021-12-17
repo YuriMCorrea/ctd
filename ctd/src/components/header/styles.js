@@ -55,7 +55,7 @@ export const styles = EStyleSheet.create({
     },
     text: {
       fontWeight:'bold',
-      fontSize:'120%',
+      fontSize:'1.7rem',
       paddingTop:'0.1rem',
       paddingLeft:'1rem',
     },

@@ -4,10 +4,9 @@ export const styles = EStyleSheet.create({
 
 // -----------------------------   CONTAINER LISTAR --------------
     container: {
-        flex: 1,
-        height: '100%',
+        // flex: 1,
+        height: '1000%',
         width: '100%',
-        alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'lightyellow'
       },

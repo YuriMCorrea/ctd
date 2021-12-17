@@ -1,5 +1,5 @@
-import EStyleSheet from "react-native-extended-stylesheet";
 import React from "react";
+import EStyleSheet from "react-native-extended-stylesheet";
 import { ScrollView, View } from "react-native";
 import { styles } from "./src/global/styles";
 import Header from "./src/components/header";

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Platform, Button} from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+// import DateTimePicker from '@react-native-community/datetimepicker';
 import styles from "./style";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
