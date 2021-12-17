@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { styles } from "../../global/styles";
 import { View, Text, AppRegistry, FlatList, TextInput, TouchableOpacity, Image} from "react-native";
 import api from "../../services";
-import CardProduto from "../../components/cardProduto"
+import CardProduto from "../../components/CardProduto"
 
 
 function Listar() {
   const [produtos, setProdutos] = useState([]);
   const [produto, setProduto] = useState(produtos);
-  const [search, setSearch]= useState('');
-
-   
+  const [search, setSearch]= useState(''); 
 
   useEffect(()=>{
     
@@ -53,9 +51,7 @@ function Listar() {
       <FlatList
 
         data={produto}
-        keyExtractor={(item) => {
-          item.id;
-        }} //ALGO UNICO NO SEU ARRAY
+        keyExtractor={(item) => {item.id}} //ALGO UNICO NO SEU ARRAY
         renderItem={({ item }) => (
           <CardProduto
             id={item.id}

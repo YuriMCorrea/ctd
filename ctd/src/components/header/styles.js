@@ -55,14 +55,15 @@ export const styles = EStyleSheet.create({
     },
     text: {
       fontWeight:'bold',
-      fontSize:'1.7rem',
-      paddingTop:'0.1rem',
+      fontSize:'1.3rem',
+      paddingTop:'1rem',
       paddingLeft:'1rem',
+      maxWidth:'100%',
     },
     // -----------------------------   HEADER LISTAR --------------
 
     cHeader: {
-        height: '15%',
+        height: '8rem',
         maxWidth: '100%',
         backgroundColor:'gold',
         flexDirection:'row',

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import Listar from "../../screens/Listar";
 import { SafeAreaView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import ImgProd from "../../../assets/amostraImg.png";
+import Editar from "../../../assets/lapis.png";
+import Deletar from "../../../assets/lixeira.png";
+import api from "../../services";
 
 function CardProduto({
   id,
@@ -12,29 +16,35 @@ function CardProduto({
   qtdEstoque,
   nomeCategoria,
   dataFabricacao,
-  fotoLink,
 }) {
+  const [key, setKey] = useState()
+
+  useEffect(() => {
+    setKey(id);
+  }, []);
+
   function deleteProduto(id) {
     const response = api.delete(`/produto/${id}`).then(function (response) {
       alert(`${response}`);
     });
   }
 
+  const navigation = useNavigation();
   return (
     <>
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView idCard={key} style={styles.safeArea}>
         <View style={styles.container}>
           <View style={styles.idImg}>
-          {/* Imagem produto */}
-          <View styles={styles.viewImagem}>
-            <Image
-              style={styles.fotoLink}
-              source={require("../../../assets/amostraImg.png")}
-            />
-          </View>
-          <View style={styles.id}>
-            <Text style={styles.letraId}> {id} </Text>
-          </View>
+            {/* Imagem produto */}
+            <View styles={styles.viewImagem}>
+              <Image
+                style={styles.fotoLink}
+                source={ImgProd}
+              />
+            </View>
+            <View style={styles.id}>
+              <Text style={styles.letraId}> {id} </Text>
+            </View>
           </View>
           {/* View pro id, nome, categoria e descrição */}
           <View style={styles.idDescricao}>
@@ -71,16 +81,20 @@ function CardProduto({
                     deleteProduto(id);
                   }}
                 >
-                  <Image
-                    style={styles.imagens}
-                    source={require("../../../assets/lapis.png")}
-                  />
+                  <View style={styles.imagens}>
+                    <Image
+                      source={Editar}
+                    />
+                  </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                  <Image
-                    style={styles.imagens}
-                    source={require("../../../assets/lixeira.png")}
-                  />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('AtualizarProduto', {idPoduto: key})}
+                >
+                  <View style={styles.imagens}>
+                    <Image
+                      source={Deletar}
+                    />
+                  </View>
                 </TouchableOpacity>
               </View>
             </View>
