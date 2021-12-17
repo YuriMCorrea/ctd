@@ -8,24 +8,28 @@ EStyleSheet.build()
 
 //Função DateTimePicker
 
-export const InputData = () => {
-  const [date, setDate] = useState(new Date(1598051730000));
+export const InputData = ({ data ,setData }) => {
+  // const [date, setDate] = useState(new Date(1598051730000));
   const [mode, setMode] = useState('date');
   const [show, setShow] = useState(false);
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
     setShow(Platform.OS === 'ios');
-    setDate(currentDate);
+    setData(currentDate);
   };
 
   const showMode = (currentMode) => {
     setShow(true);
     setMode(currentMode);
   };
-
+  
   const showDatepicker = () => {
     showMode('date');
+  };
+
+  const showTimepicker = () => {
+    showMode('time');
   };
 
   return (
@@ -38,10 +42,15 @@ export const InputData = () => {
             
         />
       </View>
+      <View>
+        <Button 
+          onPress={showTimepicker} 
+          title="Show time picker!" />
+      </View>
       {show && (
         <DateTimePicker
           testID="dateTimePicker"
-          value={date}
+          value={data}
           mode={mode}
           is24Hour={true}
           display="default"

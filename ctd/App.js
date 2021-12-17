@@ -1,11 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import React from 'react';
-import { View } from 'react-native';
-import Listar from "./src/screens/Listar"
+import { ScrollView, View } from 'react-native';
 import { styles } from './src/global/styles';
-import Header from './src/components/Header';
-import Formulario from './src/screens/Formulario';
+import AtualizarProduto from './src/screens/AtualizarProduto/index';
+import CadastrarProduto from './src/screens/CadastrarProduto/index';
 
 EStyleSheet.build()
 
@@ -13,14 +11,12 @@ export default function App() {
   return (
           <>
             {/* <StatusBar style="auto" /> */}
-
-            <View style={styles.container}>
-              <Header />
-              <Listar />
-
-              {/* <Formulario /> */}
-
-            </View>
+            <ScrollView>
+              <View style={styles.container}>
+                {/* <Formulario /> */}
+                <CadastrarProduto />
+              </View>
+            </ScrollView>
           </>
   );
 };
