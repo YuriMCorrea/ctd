@@ -14,6 +14,7 @@ export const styles = EStyleSheet.create({
       margin:'1rem',
       width: '100%',
       flexDirection:'column',
+      
   },
 
     btnListar: {
@@ -27,6 +28,7 @@ export const styles = EStyleSheet.create({
         borderColor:'#000',
         borderWidth:'0.1rem',
         borderRadius:'0.5rem',
+        marginBottom:'1rem' ,
     },
 
     btnCadastrar: {
@@ -40,6 +42,7 @@ export const styles = EStyleSheet.create({
         borderColor:'#000',
         borderWidth:'0.1rem',
         borderRadius:'0.5rem',
+        marginBottom:'1rem' ,
         
     },
 
@@ -52,17 +55,19 @@ export const styles = EStyleSheet.create({
     },
     text: {
       fontWeight:'bold',
-      fontSize:'1.2rem',
+      fontSize:'1.3rem',
       paddingTop:'1rem',
       paddingLeft:'1rem',
+      maxWidth:'100%',
     },
     // -----------------------------   HEADER LISTAR --------------
 
     cHeader: {
-        height: '15%',
+        height: '8rem',
         maxWidth: '100%',
         backgroundColor:'gold',
         flexDirection:'row',
+        borderBottomWidth: 1,
       },
 
 // -----------------------------   BODY LISTAR --------------

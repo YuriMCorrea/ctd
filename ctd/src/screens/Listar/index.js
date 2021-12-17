@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { styles } from "../../global/styles";
-
 import { View, Text, AppRegistry, FlatList, TextInput, TouchableOpacity, Image} from "react-native";
 import api from "../../services";
-import CardProduto from "../../components/cardProduto"
+import CardProduto from "../../components/CardProduto";
+
 
 
 function Listar() {
   const [produtos, setProdutos] = useState([]);
-  const [produto, setProduto] = useState([]);
-  const [search, setSearch]= useState('');
+  const [produto, setProduto] = useState(produtos);
+  const [search, setSearch]= useState(''); 
 
-   
-
-useEffect(()=>{
-  if(search!=''){
-
-    setProduto(produtos.filter(res => res.nome.toLowerCase().indexOf(search.toLowerCase())>-1))
-   
-  }
-  else{
-    setProduto(produtos)
-  }
-},[search]);
-
-useEffect(() => {
+  useEffect(()=>{
+    
+    if(search!=''){
+      setProduto(produtos.filter(res => res.nome.toLowerCase().indexOf(search.toLowerCase())>-1))
+    }
+    if(search===''){
+      setProduto(produtos)
+    }
+  },[search]);
+  
+  useEffect(() => {
     api
       .get("/produto/")
       .then((response) => setProdutos(response.data))
@@ -43,27 +40,22 @@ useEffect(() => {
   return (
        <>
 
-         <View style={styles.ContainerBusca}>
+         <View style={styles.inputContainer}>
             <TextInput
-             placeholder="Buscar por produto com ID"
+              style={styles.input}
+             placeholder="Buscar por produto por Nome"
              value={search}
              onChange={(e) => setSearch(e.nativeEvent.text)}
           />     
-          <TouchableOpacity  onPress={()=>{filtrarProduto(search)}}>
-            <Image
-              style={styles.lupa}
-              source={require('../../../assets/lupa.png')}
-            />
-            </TouchableOpacity>       
         </View>
 
 
       <FlatList
 
-        data={produtos}
-        keyExtractor={(item) => {
-          item.id;
-        }} //ALGO UNICO NO SEU ARRAY
+        data={produto}
+        keyExtractor={(item, index) => {
+          return item.id;
+        }}
         renderItem={({ item }) => (
           <CardProduto
             id={item.id}

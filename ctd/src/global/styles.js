@@ -4,12 +4,15 @@ export const styles = EStyleSheet.create({
 
 // -----------------------------   CONTAINER LISTAR --------------
     container: {
-        flex: 1,
         height: '100%',
         width: '100%',
-        alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'lightyellow'
       },
+      input:{
+        backgroundColor: 'lightgrey',
+        borderWidth:1,
+        height:"2.5rem",
+    },
     
 });
