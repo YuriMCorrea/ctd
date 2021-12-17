@@ -51,7 +51,7 @@ useEffect(() => {
           />     
           <TouchableOpacity  onPress={()=>{filtrarProduto(search)}}>
             <Image
-              style={styles.lupa}
+              style={{width:"10px", height:"10px"}}
               source={require('../../../assets/lupa.png')}
             />
             </TouchableOpacity>       
