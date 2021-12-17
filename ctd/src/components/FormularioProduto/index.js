@@ -36,6 +36,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
     
     console.log(novoProduto);
     return(
+      <View style={styles.geral}> 
         <View style={styles.container}>
             <View style={styles.containerTema}>
                 <Text style={styles.nomeTema}>Cadastrar Produto</Text>
@@ -45,9 +46,9 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                 <TextInput
                     value={novoProduto?.nome}
                     onChange={(e) => {setNovoProduto({...novoProduto, nome: e.nativeEvent.text}) }}
-                    style={styles.textInput} 
+                    style={styles.textInputNomeP} 
                     placeholder="Nome do Produto" 
-                    placeholderTextColor="lightgray"
+                    placeholderTextColor="gray"
                 />         
                 {/* <Text style={styles.nomeItem}>Descrição</Text> */}
                 <TextInput 
@@ -55,7 +56,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     onChange={(e) => {setNovoProduto({...novoProduto, descricao: e.nativeEvent.text}) }}
                     style={styles.textInput2} 
                     placeholder="Digite a descrição do produto"
-                    placeholderTextColor="white"
+                    placeholderTextColor="gray"
                 />
                 {/* <Text style={styles.nomeItem}>Quantidade em Estoque</Text> */}
                 <TextInput
@@ -64,7 +65,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     keyboardType={'numeric'}
                     style={styles.textInput} 
                     placeholder="Quantidade em estoque"
-                    placeholderTextColor="lightgray"
+                    placeholderTextColor="gray"
                 />         
                 {/* <Text style={styles.nomeItem}>Valor</Text> */}
                 <TextInput
@@ -73,7 +74,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     keyboardType={'numeric'}
                     style={styles.textInput2} 
                     placeholder="Digite o valor"
-                    placeholderTextColor="white"
+                    placeholderTextColor="gray"
                 />
                 {/* <Text style={styles.nomeItem}>Id Categoria</Text> */}
                 <TextInput
@@ -82,7 +83,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     keyboardType={'numeric'}
                     style={styles.textInput} 
                     placeholder="Digite o Id da categoria"
-                    placeholderTextColor="lightgray"
+                    placeholderTextColor="gray"
                 />          
                 {/* <Text style={styles.nomeItem}>Nome Categoria</Text> */}
                 <TextInput 
@@ -90,7 +91,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     onChange={(e) => {setNovoProduto({...novoProduto, nomeCategoria: e.nativeEvent.text}) }}
                     style={styles.textInput2} 
                     placeholder="Digite o nome da categoria"
-                    placeholderTextColor="white"
+                    placeholderTextColor="gray"
                 />           
                 {/* <Text style={styles.nomeItem}>Id Funcionario</Text> */}
                 <TextInput 
@@ -99,7 +100,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     keyboardType={'numeric'}
                     style={styles.textInput} 
                     placeholder="Digite o Id do funcionário"
-                    placeholderTextColor="lightgray"
+                    placeholderTextColor="gray"
                 />           
                 {/* <Text style={styles.nomeItem}>Nome Funcionario</Text> */}
                 <TextInput 
@@ -107,7 +108,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     onChange={(e) => {setNovoProduto({...novoProduto, nomeFuncionario: e.nativeEvent.text}) }}
                     style={styles.textInput2}
                     placeholder="Digite o nome do funcionário"
-                    placeholderTextColor="white"
+                    placeholderTextColor="gray"
 
                 />
                 {/* <Text style={styles.nomeItem}>Imagem do Produto</Text> */}
@@ -116,7 +117,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     onChange={(e) => {setNovoProduto({...novoProduto, fotoLink: e.nativeEvent.text}) }} 
                     style={styles.textInputLink}
                     placeholder="Insira o link da imagem"
-                    placeholderTextColor="lightgray"
+                    placeholderTextColor="gray"
                 />
                 {/* Função DateTimePicker*/}
                 {/* <InputData
@@ -132,6 +133,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                 </TouchableOpacity>
             </View>
         </View>
+    </View>     
     )
 
 }
