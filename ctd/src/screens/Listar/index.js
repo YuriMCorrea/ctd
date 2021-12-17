@@ -8,9 +8,7 @@ import CardProduto from "../../components/cardProduto"
 function Listar() {
   const [produtos, setProdutos] = useState([]);
   const [produto, setProduto] = useState(produtos);
-  const [search, setSearch]= useState('');
-
-   
+  const [search, setSearch]= useState(''); 
 
   useEffect(()=>{
     
