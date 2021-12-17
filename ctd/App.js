@@ -3,7 +3,7 @@ import React from "react";
 import { ScrollView, View } from "react-native";
 import { styles } from "./src/global/styles";
 import Header from "./src/components/header";
-import { Routes } from "./src/routes/routes";
+import { Routes } from "./src/routes/Routes";
 import { NavigationContainer } from "@react-navigation/native";
 
 EStyleSheet.build();

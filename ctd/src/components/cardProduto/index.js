@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./style";
 import Listar from "../../screens/Listar";
 import { SafeAreaView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 function CardProduto({
   id,
@@ -20,21 +21,22 @@ function CardProduto({
     });
   }
 
+  const navigation = useNavigation();
   return (
     <>
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
           <View style={styles.idImg}>
-          {/* Imagem produto */}
-          <View styles={styles.viewImagem}>
-            <Image
-              style={styles.fotoLink}
-              source={require("../../../assets/amostraImg.png")}
-            />
-          </View>
-          <View style={styles.id}>
-            <Text style={styles.letraId}> {id} </Text>
-          </View>
+            {/* Imagem produto */}
+            <View styles={styles.viewImagem}>
+              <Image
+                style={styles.fotoLink}
+                source={require("../../../assets/amostraImg.png")}
+              />
+            </View>
+            <View style={styles.id}>
+              <Text style={styles.letraId}> {id} </Text>
+            </View>
           </View>
           {/* View pro id, nome, categoria e descrição */}
           <View style={styles.idDescricao}>
@@ -76,7 +78,9 @@ function CardProduto({
                     source={require("../../../assets/lapis.png")}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('AtualizarProduto', id)}
+                >
                   <Image
                     style={styles.imagens}
                     source={require("../../../assets/lixeira.png")}

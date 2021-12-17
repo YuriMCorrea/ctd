@@ -13,7 +13,7 @@ export const Routes = () =>{
         <Stack.Navigator screenOptions={{ headerTransparent: true, headerShown: false }}>
             <Stack.Screen name="Listar" component={Listar} />
             <Stack.Screen name="CadastrarProduto" component={CadastrarProduto} />
-            <Stack.Screen name="AtualizarProduto" component={AtualizarProduto} />
+            <Stack.Screen name="AtualizarProduto/:id+" component={AtualizarProduto} />
         </Stack.Navigator>
     )
 }
