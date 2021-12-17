@@ -17,25 +17,20 @@ export const styles = EStyleSheet.create({
 
     imagensView: {
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flexDirection: 'row',
     },
 
     descImagem: {
         flexDirection: 'row',
-        
     },  
     
     imagens: {
-        height: 25,
-        width: 25,
-        marginBottom: 5,
-        marginTop: 5,
-        marginLeft: 150
+        height: '1rem',
+        width: '1rem',
+        margin: '0.5rem',
+        paddingRight: '1rem',
     },
-    
-    // idNomeCategoria: {
-    //     maxWidth: '100%',
-    // },
     
     idDescricao: {
         maxWidth: '80%'
@@ -89,7 +84,7 @@ export const styles = EStyleSheet.create({
         height: 70,
         width: 295,
         bottom: 0,
-        flexDirection: 'row'
+        flexDirection: 'column',
     },
 
     // qtdDtValor:{
