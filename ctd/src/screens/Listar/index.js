@@ -51,7 +51,9 @@ function Listar() {
       <FlatList
 
         data={produto}
-        keyExtractor={(item) => {item.id}} //ALGO UNICO NO SEU ARRAY
+        keyExtractor={(item, index) => {
+          return item.id;
+        }}
         renderItem={({ item }) => (
           <CardProduto
             id={item.id}
