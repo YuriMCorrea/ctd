@@ -5,20 +5,20 @@ export const styles = EStyleSheet.create({
         margin:'1rem',
         maxWidth: '100%',
         flexDirection:'row',
-        justifyContent:'flex-end',
+        justifyContent:'center',
         position:'absolute',
         top:'2.3rem',
         right:'4.8rem'
     },
     menuTotal: {
-      margin:'1rem',
+      margin:'2rem',
       width: '100%',
       flexDirection:'column',
       
   },
 
     btnListar: {
-        width:'7.5rem',
+        width:'6rem',
         height:'2.3rem',
         color:'#fff',
         backgroundColor:'#207b6e',
@@ -28,11 +28,11 @@ export const styles = EStyleSheet.create({
         borderColor:'#000',
         borderWidth:'0.1rem',
         borderRadius:'0.5rem',
-        marginBottom:'1rem' ,
+        marginBottom:'0.2rem' ,
     },
 
     btnCadastrar: {
-        width:'7.5rem',
+        width:'6rem',
         height:'2.3rem',
         color:'#fff',
         backgroundColor:'#207b6e',
@@ -42,13 +42,13 @@ export const styles = EStyleSheet.create({
         borderColor:'#000',
         borderWidth:'0.1rem',
         borderRadius:'0.5rem',
-        marginBottom:'1rem' ,
+        marginBottom:'0.2rem' ,
         
     },
 
     logo: {
-      width:60,
-      height:60,
+      width:40,
+      height:40,
       marginTop:'2rem',
       marginLeft:'1rem',
       marginBottom:'1rem',
@@ -57,7 +57,6 @@ export const styles = EStyleSheet.create({
       fontWeight:'bold',
       fontSize:'1.3rem',
       paddingTop:'1rem',
-      paddingLeft:'1rem',
       maxWidth:'100%',
     },
     // -----------------------------   HEADER LISTAR --------------

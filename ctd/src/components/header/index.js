@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
 import { styles } from './styles';
 import {useNavigation} from '@react-navigation/native'
 
 
 function Header() {
-    // const [pagina, setPaginas] = useState(['Inicio', 'Cadastrar', 'Editar', 'Listar']);
+
     const navigation = useNavigation();
 
     return (
@@ -26,6 +25,11 @@ function Header() {
                         <View>
                             <TouchableOpacity onPress={() => navigation.navigate("CadastrarProduto")}>
                                 <Text style={styles.btnCadastrar}>Cadastrar</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View>
+                            <TouchableOpacity onPress={() => navigation.navigate("ListarPorId")}>
+                                <Text style={styles.btnCadastrar}>Listar por ID</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
