@@ -60,7 +60,7 @@ function Listar() {
               
         </View>
         <Text style={{padding: '5%', fontWeight: 'bold', textAlign: 'center'}}>
-          Favor digitar um texto na busca para filtrar os produtos por nome.
+          Digite um texto para filtrar por nome.
         </Text>
 
       <FlatList

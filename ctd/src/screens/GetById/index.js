@@ -3,23 +3,14 @@ import { styles } from "../../global/styles";
 import { View, Text, AppRegistry, FlatList, TextInput, TouchableOpacity, Image} from "react-native";
 import api from "../../services";
 import CardProduto from "../../components/CardProduto";
+import EStyleSheet from "react-native-extended-stylesheet";
 
 
 
 function ListarPorId() {
-  const [produtos, setProdutos] = useState([]);
-  const [produto, setProduto] = useState(produtos);
+  const [produto, setProduto] = useState({});
   const [search, setSearch]= useState(''); 
   
-  useEffect(() => {
-    api
-      .get("/produto/")
-      .then((response) => setProdutos(response.data))
-      .catch((err) => {
-        console.error("Ops ocorreu um erro" + err);
-      });
-  }, []);
-
   function deleteProduto(id) {
     api
     .delete(`/produto/${id}`)
@@ -36,6 +27,16 @@ function ListarPorId() {
 
   }
 
+  function filtrarProdutosPorId() {
+    api
+      .get("/produto/")
+      .then((response) => setProduto(response.data))
+      .catch((err) => {
+        console.error("Ops ocorreu um erro" + err);
+    })
+  };
+
+
 
   return (
        <>
@@ -47,9 +48,12 @@ function ListarPorId() {
              value={search}
              onChange={(e) => setSearch(e.nativeEvent.text)}
           />     
+          <TouchableOpacity onPress={filtrarProdutosPorId}>
+            <Text style={styleses.btn}>Filtrar</Text>
+          </TouchableOpacity>
         </View>
         <Text style={{padding: '5%', fontWeight: 'bold', textAlign: 'center'}}>
-          Favor digitar um texto na busca para filtrar os produtos por nome.
+          Favor digitar o número do id do produto na busca para filtrar os produtos por ID.
         </Text>
 
       <FlatList
@@ -77,3 +81,19 @@ function ListarPorId() {
 }
 
 export default ListarPorId;
+
+
+const styleses = EStyleSheet.create({
+  btn: {
+    height:'3rem',
+    width:'33%',
+    backgroundColor:'lightgrey',
+    color:'black',
+    fontSize: '1rem',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    padding: '0.5rem',
+    marginLeft: '33%',
+    marginTop: '1rem',
+  }
+})
