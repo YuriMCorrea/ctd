@@ -53,7 +53,7 @@ function Listar() {
          <View style={styles.inputContainer}>
             <TextInput
               style={styles.input}
-             placeholder="Buscar por produto por Nome"
+             placeholder="Digite um produto para realizar a busca."
              value={search}
              onChange={(e) => setSearch(e.nativeEvent.text)}
             /> 
