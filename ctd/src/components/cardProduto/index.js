@@ -88,12 +88,8 @@ function CardProduto({
 
 
                 <View style={styles.imagens2}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('AtualizarProduto', {idPoduto: key})}
-                >
-                    <Image
-                      source={Editar}
-                    />
+                <TouchableOpacity onPress={() => navigation.navigate('AtualizarProduto', {idPoduto: key})} >
+                    <Image source={Editar} />
                 </TouchableOpacity>
                   </View>
               </View>
