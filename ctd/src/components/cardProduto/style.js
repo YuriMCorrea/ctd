@@ -30,6 +30,15 @@ export const styles = EStyleSheet.create({
         width: '1rem',
         margin: '0.5rem',
         paddingRight: '1rem',
+        backgroundColor: 'blue',
+    },
+    
+    imagens2: {
+        backgroundColor: 'green',
+        height: '1rem',
+        width: '1rem',
+        margin: '0.5rem',
+        paddingRight: '1rem',
     },
     
     idDescricao: {

@@ -56,7 +56,8 @@ function Listar() {
              placeholder="Buscar por produto por Nome"
              value={search}
              onChange={(e) => setSearch(e.nativeEvent.text)}
-          />     
+            /> 
+              
         </View>
         <Text style={{padding: '5%', fontWeight: 'bold', textAlign: 'center'}}>
           Favor digitar um texto na busca para filtrar os produtos por nome.

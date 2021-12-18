@@ -71,6 +71,7 @@ function CardProduto({
               <Text style={styles.letras}> Descrição: {descricao} </Text>
               {/* View dos botões deletar e atualizar */}
               <View style={styles.imagensView}>
+                <View style={{paddingRight: 10}}>
                 <TouchableOpacity
                   onPress={() => {
                     funcaoDeletar(id);
@@ -83,15 +84,18 @@ function CardProduto({
                     />
                   </View>
                 </TouchableOpacity>
+                </View>
+
+
+                <View style={styles.imagens2}>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('AtualizarProduto', {idPoduto: key})}
                 >
-                  <View style={styles.imagens}>
                     <Image
                       source={Editar}
                     />
-                  </View>
                 </TouchableOpacity>
+                  </View>
               </View>
             </View>
           </View>
