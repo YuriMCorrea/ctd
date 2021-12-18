@@ -2,18 +2,16 @@ import React ,{ useState, useEffect } from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from "./style";
-import InputData from "../InputData/index";
 
 
 EStyleSheet.build()
 
 export default function FormularioProduto({ registrarProduto, editProduto }) {
     
-    // useEffect(() => {
-    //     editProduto === null ? null : setNovoProduto(editProduto);
-    // }, [])
+    useEffect(() => {
+        editProduto === null ? null : setNovoProduto(editProduto);
+    }, [])
 
-    editProduto ? setNovoProduto(editProduto) : null
 
     /* ESTADOS DOS PRODUTOS  */
     const [data, setData] = useState(new Date());
@@ -47,18 +45,18 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     value={novoProduto?.nome}
                     onChange={(e) => {setNovoProduto({...novoProduto, nome: e.nativeEvent.text}) }}
                     style={styles.textInputNomeP} 
-                    placeholder="Nome do Produto" 
+                    placeholder="Digite seu nome"
                     placeholderTextColor="gray"
                 />         
                 {/* <Text style={styles.nomeItem}>Descrição</Text> */}
-                <TextInput 
+                {/* <TextInput 
                     value={novoProduto?.descricao}
                     onChange={(e) => {setNovoProduto({...novoProduto, descricao: e.nativeEvent.text}) }}
                     style={styles.textInput2} 
                     placeholder="Digite a descrição do produto"
                     placeholderTextColor="gray"
-                />
-                {/* <Text style={styles.nomeItem}>Quantidade em Estoque</Text> */}
+                /> */}
+                {/* <Text style={styles.nomeItem}>Quantidade em Estoque</Text>
                 <TextInput
                     value={novoProduto?.qtdEstoque.toString()}
                     onChange={(e) => {setNovoProduto({...novoProduto, qtdEstoque: e.nativeEvent.text}) }}
@@ -68,71 +66,72 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                     placeholderTextColor="gray"
                 />         
                 {/* <Text style={styles.nomeItem}>Valor</Text> */}
-                <TextInput
+                {/* <TextInput
                     value={novoProduto?.valor.toString()}
                     onChange={(e) => {setNovoProduto({...novoProduto, valor: e.nativeEvent.text}) }}
                     keyboardType={'numeric'}
                     style={styles.textInput2} 
                     placeholder="Digite o valor"
                     placeholderTextColor="gray"
-                />
+                /> */}
                 {/* <Text style={styles.nomeItem}>Id Categoria</Text> */}
-                <TextInput
+                {/* <TextInput
                     value={novoProduto?.idCategoria.toString()} 
                     onChange={(e) => {setNovoProduto({...novoProduto, idCategoria: e.nativeEvent.text}) }}
                     keyboardType={'numeric'}
                     style={styles.textInput} 
                     placeholder="Digite o Id da categoria"
                     placeholderTextColor="gray"
-                />          
+                />           */}
                 {/* <Text style={styles.nomeItem}>Nome Categoria</Text> */}
-                <TextInput 
+                {/* <TextInput 
                     value={novoProduto?.nomeCategoria}
                     onChange={(e) => {setNovoProduto({...novoProduto, nomeCategoria: e.nativeEvent.text}) }}
                     style={styles.textInput2} 
                     placeholder="Digite o nome da categoria"
                     placeholderTextColor="gray"
-                />           
+                />            */}
                 {/* <Text style={styles.nomeItem}>Id Funcionario</Text> */}
-                <TextInput 
+                {/* <TextInput 
                     value={novoProduto?.idFuncionario.toString()}
                     onChange={(e) => {setNovoProduto({...novoProduto, idFuncionario: e.nativeEvent.text}) }}
                     keyboardType={'numeric'}
                     style={styles.textInput} 
                     placeholder="Digite o Id do funcionário"
                     placeholderTextColor="gray"
-                />           
+                />            */}
                 {/* <Text style={styles.nomeItem}>Nome Funcionario</Text> */}
-                <TextInput 
+                {/* <TextInput 
                     value={novoProduto?.nomeFuncionario}
                     onChange={(e) => {setNovoProduto({...novoProduto, nomeFuncionario: e.nativeEvent.text}) }}
                     style={styles.textInput2}
                     placeholder="Digite o nome do funcionário"
                     placeholderTextColor="gray"
 
-                />
+                /> */}
                 {/* <Text style={styles.nomeItem}>Imagem do Produto</Text> */}
-                <TextInput
+                {/* <TextInput
                     value={novoProduto?.fotoLink}
                     onChange={(e) => {setNovoProduto({...novoProduto, fotoLink: e.nativeEvent.text}) }} 
                     style={styles.textInputLink}
                     placeholder="Insira o link da imagem"
                     placeholderTextColor="gray"
-                />
+                /> */}
                 {/* Função DateTimePicker*/}
                 {/* <InputData
                     setData={setData}
                     data={data}
                 />    */}
-            </View>
+            {/* </View>
             <View style={styles.containerBotao}>
                 <TouchableOpacity
                     onPress={() => registrarProduto(data, novoProduto)} 
                     style={styles.botao}>                   
                     <Text style={styles.textoBotao}>CADASTRE</Text>
                 </TouchableOpacity>
-            </View>
+            </View>  */}
         </View>
+    </View> 
     </View>     
     )
 
