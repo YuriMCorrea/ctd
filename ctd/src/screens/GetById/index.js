@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { styles } from "../../global/styles";
-import { View, Text, AppRegistry, FlatList, TextInput, TouchableOpacity, Image} from "react-native";
+import { View, Text, FlatList, TextInput, TouchableOpacity } from "react-native";
 import api from "../../services";
 import CardProduto from "../../components/CardProduto";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 
-
-function ListarPorId() {
+function GetById() {
   const [produto, setProduto] = useState({});
   const [search, setSearch]= useState(''); 
   
@@ -80,7 +79,7 @@ function ListarPorId() {
   );
 }
 
-export default ListarPorId;
+export default GetById;
 
 
 const styleses = EStyleSheet.create({
