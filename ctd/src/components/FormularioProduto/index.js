@@ -1,45 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React ,{ useState, useEffect } from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from "./style";
+import InputData from "../InputData/index";
 
-EStyleSheet.build();
+
+EStyleSheet.build()
 
 export default function FormularioProduto({ registrarProduto, editProduto }) {
-  useEffect(() => {
-    editProduto === null ? null : setNovoProduto(editProduto);
+    
+    // useEffect(() => {
+    //     editProduto === null ? null : setNovoProduto(editProduto);
+    // }, [])
+
+    editProduto ? setNovoProduto(editProduto) : null
     editProduto === null ? setTitle('Cadastrar') : setTitle('Atualizar') ;
 
-  }, []);
+    /* ESTADOS DOS PRODUTOS  */
+    const [data, setData] = useState(new Date());
+    const [title, setTitle] = useState('');
+    const [novoProduto, setNovoProduto] = useState({
+        nome: "",
+        descricao: "",
+        qtdEstoque: 0,
+        valor: 0,
+        idCategoria: 0,
+        nomeCategoria: "",
+        idFuncionario: 0,
+        nomeFuncionario: "",
+        dataFabricacao: "",
+        fotoLink: "",
+    });
 
-  /* ESTADOS DOS PRODUTOS  */
-  const [data, setData] = useState(new Date());
-  const [title, setTitle] = useState('');
-  const [novoProduto, setNovoProduto] = useState({
-    nome: "",
-    descricao: "",
-    qtdEstoque: 0,
-    valor: 0,
-    idCategoria: 0,
-    nomeCategoria: "",
-    idFuncionario: 0,
-    nomeFuncionario: "",
-    dataFabricacao: "",
-    fotoLink: "",
-  });
-
-  // function atualizarDataHora() {
-  //     setNovoProduto({...novoProduto, dataFabricacao: {date} })
-  // }
-
-  console.log(novoProduto);
-  return (
-    <View style={styles.geral}>
-      <View style={styles.container}>
-        <View style={styles.containerTema}>
-          <Text style={styles.nomeTema}>{title} Produto</Text>
-        </View>
-        </View>
+    // function atualizarDataHora() {
+    //     setNovoProduto({...novoProduto, dataFabricacao: {date} })
+    // }
+    
+    console.log(novoProduto);
+    return(
+      <View style={styles.geral}> 
+        <View style={styles.container}>
+            <View style={styles.containerTema}>
+                <Text style={styles.nomeTema}>{title} Produto</Text>
+            </View>
             <View style={styles.form}>
                 {/* <Text style={styles.nomeItem}>Nome</Text> */}
                 <TextInput
@@ -132,6 +135,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
                 </TouchableOpacity>
             </View>
         </View>
+    </View>     
     )
 
 }
