@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import api from "../../services";
-import CardProduto from "../../components/CardProduto";
+import CardProduto from "../../components/cardProduto";
 import EStyleSheet from "react-native-extended-stylesheet";
 
 function GetById() {

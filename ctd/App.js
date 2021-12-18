@@ -1,6 +1,6 @@
 import React from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
-import Header from "./src/components/Header";
+import Header from "./src/components/header";
 import Routes from "./src/routes/routes";
 import { NavigationContainer } from "@react-navigation/native";
 

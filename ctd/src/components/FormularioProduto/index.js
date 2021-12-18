@@ -2,7 +2,6 @@ import React ,{ useState, useEffect } from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from "./style";
-import InputData from "../InputData/index";
 
 
 EStyleSheet.build()
