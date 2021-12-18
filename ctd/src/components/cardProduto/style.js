@@ -31,7 +31,7 @@ export const styles = EStyleSheet.create({
         width: '1rem',
         margin: '0.5rem',
         paddingRight: '1rem',
-        marginRight:"10rem",
+        marginRight:"5rem",
     },
     
     imagens2: {
@@ -40,7 +40,7 @@ export const styles = EStyleSheet.create({
         width: '1rem',
         margin: '0.5rem',
         paddingRight: '1rem',
-
+        marginLeft:"5rem",
     },
     
     idDescricao: {

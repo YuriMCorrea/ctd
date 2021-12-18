@@ -8,10 +8,13 @@ EStyleSheet.build();
 export default function FormularioProduto({ registrarProduto, editProduto }) {
   useEffect(() => {
     editProduto === null ? null : setNovoProduto(editProduto);
+    editProduto === null ? setTitle('Cadastrar') : setTitle('Atualizar') ;
+
   }, []);
 
   /* ESTADOS DOS PRODUTOS  */
   const [data, setData] = useState(new Date());
+  const [title, setTitle] = useState('');
   const [novoProduto, setNovoProduto] = useState({
     nome: "",
     descricao: "",
@@ -34,7 +37,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
     <View style={styles.geral}>
       <View style={styles.container}>
         <View style={styles.containerTema}>
-          <Text style={styles.nomeTema}>Cadastrar Produto</Text>
+          <Text style={styles.nomeTema}>{title} Produto</Text>
         </View>
         <View style={styles.form}>
           <TextInput
