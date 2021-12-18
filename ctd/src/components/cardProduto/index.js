@@ -16,18 +16,13 @@ function CardProduto({
   qtdEstoque,
   nomeCategoria,
   dataFabricacao,
+  funcaoDeletar,
 }) {
   const [key, setKey] = useState()
 
   useEffect(() => {
     setKey(id);
   }, []);
-
-  function deleteProduto(id) {
-    const response = api.delete(`/produto/${id}`).then(function (response) {
-      alert(`${response}`);
-    });
-  }
 
   const navigation = useNavigation();
   return (
@@ -78,12 +73,13 @@ function CardProduto({
               <View style={styles.imagensView}>
                 <TouchableOpacity
                   onPress={() => {
-                    deleteProduto(id);
+                    funcaoDeletar(id);
+                    
                   }}
                 >
                   <View style={styles.imagens}>
                     <Image
-                      source={Editar}
+                      source={Deletar}
                     />
                   </View>
                 </TouchableOpacity>
@@ -92,7 +88,7 @@ function CardProduto({
                 >
                   <View style={styles.imagens}>
                     <Image
-                      source={Deletar}
+                      source={Editar}
                     />
                   </View>
                 </TouchableOpacity>

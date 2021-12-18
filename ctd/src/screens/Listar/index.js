@@ -30,12 +30,22 @@ function Listar() {
       });
   }, []);
 
+  function deleteProduto(id) {
+    api
+    .delete(`/produto/${id}`)
+    .then(alert("Produto deletado"))
+    .catch((err) => {
+      console.error("Ops ocorreu um erro" + err);
+    });
+    const novoArray = produtos.filter((produtoDeletado) => {
+      return produtoDeletado.id != id;
+    })
 
-  function filtrarProduto(search){
+    setProduto(novoArray);
+    setSearch('');
 
-       setProduto(produtos.id.filter(search));
-         search ? setProduto(produtos.getElementById(search)) : setProduto(produtos);
-            }
+  }
+
 
   return (
        <>
@@ -48,7 +58,9 @@ function Listar() {
              onChange={(e) => setSearch(e.nativeEvent.text)}
           />     
         </View>
-
+        <Text style={{padding: '5%', fontWeight: 'bold', textAlign: 'center'}}>
+          Favor digitar um texto na busca para filtrar os produtos por nome.
+        </Text>
 
       <FlatList
 
@@ -58,6 +70,7 @@ function Listar() {
         }}
         renderItem={({ item }) => (
           <CardProduto
+            funcaoDeletar={deleteProduto}
             id={item.id}
             nome={item.nome}
             descricao={item.descricao}
