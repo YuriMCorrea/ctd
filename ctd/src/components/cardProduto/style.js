@@ -19,6 +19,7 @@ export const styles = EStyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
+        marginLeft:"10rem",
     },
 
     descImagem: {
@@ -30,6 +31,7 @@ export const styles = EStyleSheet.create({
         width: '1rem',
         margin: '0.5rem',
         paddingRight: '1rem',
+        marginRight:"12rem",
     },
     
     idDescricao: {
