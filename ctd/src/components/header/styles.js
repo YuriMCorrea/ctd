@@ -49,9 +49,9 @@ export const styles = EStyleSheet.create({
     logo: {
       width:40,
       height:40,
-      marginTop:'2rem',
+      marginTop:'2.5rem',
       marginLeft:'1rem',
-      marginBottom:'1rem',
+
     },
     text: {
       fontWeight:'bold',
