@@ -37,7 +37,6 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
           <Text style={styles.nomeTema}>Cadastrar Produto</Text>
         </View>
         <View style={styles.form}>
-          <Text style={styles.nomeItem}>Nome</Text>
           <TextInput
             value={novoProduto?.nome}
             onChange={(e) => {
@@ -47,7 +46,6 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite seu nome"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Descrição</Text>
           <TextInput
             value={novoProduto?.descricao}
             onChange={(e) => {
@@ -57,7 +55,6 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite a descrição do produto"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Quantidade em Estoque</Text>
           <TextInput
             value={novoProduto?.qtdEstoque.toString()}
             onChange={(e) => {
@@ -71,7 +68,6 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Quantidade em estoque"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Valor</Text>
           <TextInput
             value={novoProduto?.valor.toString()}
             onChange={(e) => {
@@ -82,7 +78,6 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite o valor"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Id Categoria</Text>
           <TextInput
             value={novoProduto?.idCategoria.toString()}
             onChange={(e) => {
@@ -96,7 +91,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite o Id da categoria"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Nome Categoria</Text>
+
           <TextInput
             value={novoProduto?.nomeCategoria}
             onChange={(e) => {
@@ -109,7 +104,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite o nome da categoria"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Id Funcionario</Text>
+
           <TextInput
             value={novoProduto?.idFuncionario.toString()}
             onChange={(e) => {
@@ -123,7 +118,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite o Id do funcionário"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Nome Funcionario</Text>
+
           <TextInput
             value={novoProduto?.nomeFuncionario}
             onChange={(e) => {
@@ -136,7 +131,7 @@ export default function FormularioProduto({ registrarProduto, editProduto }) {
             placeholder="Digite o nome do funcionário"
             placeholderTextColor="gray"
           />
-          <Text style={styles.nomeItem}>Imagem do Produto</Text>
+
           <TextInput
             value={novoProduto?.fotoLink}
             onChange={(e) => {
